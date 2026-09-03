@@ -9,6 +9,16 @@ brew services start codad-server
 codad-server pair            # prints the QR the app scans
 ```
 
+Without Homebrew — installs to `~/.local/bin`, registers a LaunchAgent, nothing runs as
+root, and it refuses rather than quietly producing a second copy:
+
+```sh
+curl -fsSL https://github.com/KQAR/homebrew-codad/releases/latest/download/install.sh | sh
+```
+
+Options through that pipe need `sh -s --`, since the script is on sh's stdin and not in its
+arguments: `| sh -s -- --dry-run`, `--force`, `--no-service`, `--uninstall`.
+
 Upgrade with `brew upgrade codad-server`; the daemon restarts under `brew services` on its
 own. Uninstall with `brew services stop codad-server && brew uninstall codad-server` — that
 leaves `~/.codad` (the host key and the paired devices) in place, so removing it is a

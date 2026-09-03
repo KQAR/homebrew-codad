@@ -7,7 +7,7 @@
 class CodadServer < Formula
   desc "Host daemon for codad: drive the coding agents on your Mac from your phone"
   homepage "https://github.com/KQAR/homebrew-codad"
-  url "https://github.com/KQAR/homebrew-codad/releases/download/v0.0.1/codad-server-0.0.1-universal.tar.gz"
+  url "https://github.com/KQAR/homebrew-codad/releases/download/v0.0.1-2/codad-server-0.0.1-universal.tar.gz"
   sha256 "72f76560c4b1cf144cd2047c212e4c0c043fd667c8f93bb5f258f2f7fcd6e07a"
 
   # Package.swift's floor: Network.framework's QUIC is what carries the wire, and the daemon
